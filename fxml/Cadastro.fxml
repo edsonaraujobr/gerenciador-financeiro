@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPaneTelaToda" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CadastroController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="803.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Imagens/Background.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="148.0" fitWidth="197.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="495.0" AnchorPane.topAnchor="-10.0">
+         <image>
+            <Image url="@Imagens/logopng.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="300.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastrar" textAlignment="CENTER" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="47.0">
+         <font>
+            <Font name="Arial Bold" size="43.0" />
+         </font>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" offsetX="2.0" offsetY="2.0">
+               <color>
+                  <Color opacity="0.800000011920929" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Text>
+      <AnchorPane layoutX="243.0" layoutY="124.0" prefHeight="163.0" prefWidth="400.0" AnchorPane.bottomAnchor="113.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="130.0">
+         <children>
+            <VBox layoutY="-9.0" prefHeight="200.0" prefWidth="400.0" AnchorPane.bottomAnchor="145.890625" AnchorPane.topAnchor="-9.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Digite seu nome:" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="0.0" offsetX="2.0" offsetY="2.0" radius="0.0" width="0.0">
+                           <color>
+                              <Color opacity="0.30000001192092896" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Text>
+                  <TextField fx:id="textFieldNome" prefHeight="25.0" prefWidth="400.0" promptText="Nome">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="0.0" offsetX="3.0" offsetY="3.0" radius="0.0" width="0.0">
+                           <color>
+                              <Color opacity="0.10000000149011612" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <VBox.margin>
+                        <Insets top="3.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Crie uma senha:" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="0.0" offsetX="2.0" offsetY="2.0" radius="0.0" width="0.0">
+                           <color>
+                              <Color opacity="0.30000001192092896" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <VBox.margin>
+                        <Insets top="12.0" />
+                     </VBox.margin>
+                  </Text>
+                  <PasswordField fx:id="textFieldSenha" prefHeight="25.0" prefWidth="400.0" promptText="Senha">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="0.0" offsetX="3.0" offsetY="3.0" radius="0.0" width="0.0">
+                           <color>
+                              <Color opacity="0.10000000149011612" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <VBox.margin>
+                        <Insets top="3.0" />
+                     </VBox.margin>
+                  </PasswordField>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Repita a senha:" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="0.0" offsetX="2.0" offsetY="2.0" radius="0.0" width="0.0">
+                           <color>
+                              <Color opacity="0.30000001192092896" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <VBox.margin>
+                        <Insets top="12.0" />
+                     </VBox.margin>
+                  </Text>
+                  <PasswordField fx:id="textFieldRepetirSenha" prefHeight="25.0" prefWidth="400.0" promptText="Senha">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="0.0" offsetX="3.0" offsetY="3.0" radius="0.0" width="0.0">
+                           <color>
+                              <Color opacity="0.10000000149011612" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <VBox.margin>
+                        <Insets top="3.0" />
+                     </VBox.margin>
+                  </PasswordField>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <HBox alignment="CENTER" layoutY="303.0" prefHeight="25.0" prefWidth="800.0" AnchorPane.bottomAnchor="72.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="303.0">
+         <children>
+            <Label fx:id="labelNomeJaExiste" text="Já existe um usuario com esse nome!" textFill="#e7eb00" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" height="1.0" offsetX="2.0" offsetY="2.0" radius="0.0" width="0.0">
+                     <color>
+                        <Color opacity="0.20000000298023224" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="313.0" prefHeight="25.0" prefWidth="800.0" AnchorPane.bottomAnchor="72.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="303.0">
+         <children>
+            <Label fx:id="labelSenhasNaoConferem" text="Senhas não conferem!" textFill="#e7eb00" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" height="1.0" offsetX="2.0" offsetY="2.0" radius="0.0" width="0.0">
+                     <color>
+                        <Color opacity="0.20000000298023224" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="48.0" prefWidth="800.0" AnchorPane.bottomAnchor="72.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="303.0">
+         <children>
+            <Label fx:id="labelCamposVazios" text="Campos vazios!" textFill="#e7eb00" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" height="1.0" offsetX="2.0" offsetY="2.0" radius="0.0" width="0.0">
+                     <color>
+                        <Color opacity="0.20000000298023224" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+         </children>
+      </HBox>
+      <AnchorPane layoutY="375.0" prefHeight="25.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="375.0">
+         <children>
+            <HBox alignment="CENTER" layoutX="480.0" layoutY="-37.0" prefHeight="37.0" prefWidth="122.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="480.0" AnchorPane.rightAnchor="198.0" AnchorPane.topAnchor="-37.0">
+               <children>
+                  <Button fx:id="buttonConfirmar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleButtonConfirmar" prefHeight="20.0" prefWidth="115.0" style="-fx-background-color: #67b79e;" text="Confirmar" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Futura Md BT Medium" size="17.0" />
+                     </font>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="20.0" offsetX="3.0" offsetY="3.0" radius="9.5" width="20.0">
+                           <color>
+                              <Color opacity="0.30000001192092896" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="364.0" layoutY="-27.0" prefHeight="37.0" prefWidth="115.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="364.0" AnchorPane.rightAnchor="321.0" AnchorPane.topAnchor="-37.0">
+               <children>
+                  <Button fx:id="buttonVoltar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleButtonVoltar" prefHeight="20.0" prefWidth="115.0" style="-fx-background-color: #67b79e;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Futura Md BT Medium" size="17.0" />
+                     </font>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="20.0" offsetX="3.0" offsetY="3.0" radius="9.5" width="20.0">
+                           <color>
+                              <Color opacity="0.30000001192092896" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPaneTelaDespesa" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaDespesaController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="803.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Imagens/Background.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="130.0" fitWidth="130.0" layoutX="30.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="310.0" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="695.0" AnchorPane.topAnchor="-40.0">
+         <image>
+            <Image url="@Imagens/logopng.png" />
+         </image>
+      </ImageView>
+      <Button alignment="TOP_CENTER" contentDisplay="TOP" layoutX="42.0" layoutY="72.0" maxHeight="31.0" minWidth="31.0" mnemonicParsing="false" opacity="0.61" prefHeight="31.0" prefWidth="168.0" style="-fx-background-color: #67b79e;" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="34.0" AnchorPane.topAnchor="62.0">
+         <font>
+            <Font name="Futura Md BT Medium" size="17.0" />
+         </font>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="20.0" offsetX="3.0" offsetY="3.0" radius="9.5" width="20.0">
+               <color>
+                  <Color opacity="0.30000001192092896" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+      <VBox alignment="TOP_CENTER" disable="true" layoutX="221.0" layoutY="14.0" prefHeight="114.0" prefWidth="359.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Despesa" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial Bold" size="39.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" offsetX="2.0" offsetY="2.0">
+                     <color>
+                        <Color opacity="0.800000011920929" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Text>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="69.0" layoutY="70.0" prefHeight="46.0" prefWidth="190.0" AnchorPane.bottomAnchor="294.0" AnchorPane.leftAnchor="59.0" AnchorPane.rightAnchor="551.0" AnchorPane.topAnchor="60.0">
+         <children>
+            <HBox layoutX="-19.0" layoutY="6.0" prefHeight="16.0" prefWidth="160.0" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="-19.0" AnchorPane.rightAnchor="49.0" AnchorPane.topAnchor="6.0">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="R$ " textAlignment="CENTER" wrappingWidth="48.12841796875">
+                     <font>
+                        <Font name="Arial Bold" size="28.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" offsetX="2.0" offsetY="2.0">
+                           <color>
+                              <Color opacity="0.800000011920929" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Text>
+                  <Label fx:id="labelDespesaAtual" prefHeight="27.0" prefWidth="111.0" text="0,00" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="29.0" />
+                     </font>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" offsetX="2.0" offsetY="2.0">
+                           <color>
+                              <Color opacity="0.800000011920929" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <HBox.margin>
+                        <Insets bottom="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="10.0" layoutY="13.0" prefHeight="265.0" prefWidth="800.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0">
+         <children>
+            <TableView fx:id="tableDespesa" prefHeight="265.0" prefWidth="689.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="111.0" AnchorPane.topAnchor="0.0">
+               <columns>
+                  <TableColumn fx:id="tableColumnDespesaDescricao" prefWidth="313.0" resizable="false" text="Descrição" />
+                  <TableColumn fx:id="tableColumnDespesaValor" prefWidth="185.0" resizable="false" text="Valor" />
+                  <TableColumn fx:id="tableColumnDespesaData" prefWidth="190.0" resizable="false" text="Data" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="295.0" fitWidth="112.0" layoutX="688.0" layoutY="178.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="688.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0">
+         <image>
+            <Image url="@Imagens/tapar.png" />
+         </image>
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </ImageView>
+      <HBox layoutX="248.0" layoutY="62.0" prefHeight="44.0" prefWidth="552.0" AnchorPane.bottomAnchor="294.0" AnchorPane.leftAnchor="248.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="62.0">
+         <children>
+            <Button fx:id="buttonAdicionarDespesa" alignment="TOP_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleButtonAdicionarDespesa" prefHeight="32.0" prefWidth="168.0" style="-fx-background-color: #67b79e;" text="Adicionar Despesa" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Futura Md BT Medium" size="17.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" height="20.0" offsetX="3.0" offsetY="3.0" radius="9.5" width="20.0">
+                     <color>
+                        <Color opacity="0.30000001192092896" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <TextField fx:id="textFieldPesquisaDespesa" alignment="TOP_LEFT" onKeyPressed="#handlePesquisarDespesa" prefHeight="39.0" prefWidth="369.0" promptText="Pesquisar Despesa">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" offsetX="3.0" offsetY="3.0">
+                     <color>
+                        <Color opacity="0.30000001192092896" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <padding>
+                  <Insets left="7.0" right="7.0" top="7.0" />
+               </padding>
+            </TextField>
+         </children>
+      </HBox>
+      <ImageView fx:id="glowExcluir" fitHeight="160.0" fitWidth="130.0" layoutX="690.0" layoutY="232.5" opacity="0.8" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.bottomAnchor="30.9" AnchorPane.leftAnchor="680.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="222.5">
+         <image>
+            <Image url="@Imagens/glowExcluir.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="glowEditar" fitHeight="150.0" fitWidth="130.0" layoutX="689.0" layoutY="132.0" opacity="0.8" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.bottomAnchor="30.962890625" AnchorPane.leftAnchor="679.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="122.0">
+         <image>
+            <Image url="@Imagens/glowEditar.png" />
+         </image>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="0.0" offsetX="5.0" offsetY="5.0" radius="0.0" width="0.0" />
+         </effect>
+      </ImageView>
+      <AnchorPane layoutX="689.0" layoutY="122.0" prefHeight="265.0" prefWidth="111.0" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="689.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="112.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="265.0" prefWidth="130.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fx:id="buttonEditar" fitHeight="150.0" fitWidth="70.0" onMouseClicked="#clicouEmEditar" onMouseEntered="#passouEmEditar" onMouseExited="#saiuDeEditar" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Imagens/editarpng%20copiar.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="30.0" />
+                     </VBox.margin>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="10.0" offsetX="5.0" offsetY="5.0" radius="4.5" width="10.0">
+                           <color>
+                              <Color opacity="0.30000001192092896" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </ImageView>
+                  <ImageView fx:id="buttonDeletar" fitHeight="150.0" fitWidth="70.0" onMouseClicked="#clicouEmExcluir" onMouseEntered="#passouEmExcluir" onMouseExited="#saiuDeExcluir" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Imagens/excluirpng.png" />
+                     </image>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="10.0" offsetX="5.0" offsetY="5.0" radius="4.5" width="10.0">
+                           <color>
+                              <Color opacity="0.30000001192092896" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#67b79e" height="32.0" layoutX="-11.0" layoutY="385.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="821.0" AnchorPane.bottomAnchor="-7.0" AnchorPane.leftAnchor="-21.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="375.0" />
+      <Button fx:id="buttonSair" layoutX="87.0" layoutY="375.0" mnemonicParsing="false" onAction="#handleButtonSair" style="-fx-background-color: #67b79e;" text="Sair" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="87.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Button fx:id="buttonTelaInicial" layoutY="375.0" mnemonicParsing="false" onAction="#handleButtonTelaInicial" style="-fx-background-color: #67b79e;" text="Tela Inicial" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

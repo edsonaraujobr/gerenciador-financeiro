@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPaneTelaEditarDespesa" prefHeight="260.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.telaEditarReceitaController">
+   <children>
+      <ImageView fitHeight="260.0" fitWidth="350.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@Imagens/Background.png" />
+         </image>
+      </ImageView>
+      <HBox alignment="TOP_CENTER" prefHeight="47.0" prefWidth="350.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <Label text="Editar Receita" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" offsetX="2.0" offsetY="2.0">
+                     <color>
+                        <Color opacity="0.800000011920929" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="156.0" layoutY="223.0" prefHeight="37.0" prefWidth="140.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button fx:id="buttonSalvar" mnemonicParsing="false" onAction="#handleButtonSalvar" style="-fx-background-color: #67b79e;" text="Salvar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" offsetX="2.0" offsetY="2.0">
+                     <color>
+                        <Color opacity="0.30000001192092896" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Button fx:id="buttonCancelar" mnemonicParsing="false" onAction="#handleButtonCancelar" style="-fx-background-color: #67b79e;" text="Cancelar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" offsetX="2.0" offsetY="2.0">
+                     <color>
+                        <Color opacity="0.30000001192092896" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+         </children>
+      </HBox>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="194.0" prefHeight="20.0" prefWidth="295.0" textAlignment="CENTER" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <VBox layoutX="59.0" layoutY="65.0" prefHeight="130.0" prefWidth="232.0" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="79.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Digite o novo nome da Receita:">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" offsetX="2.0" offsetY="2.0">
+                     <color>
+                        <Color opacity="0.6000000238418579" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Text>
+            <TextField fx:id="textFieldNomeReceita" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: #67b79e;">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" offsetX="2.0" offsetY="2.0">
+                     <color>
+                        <Color opacity="0.4000000059604645" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </TextField>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Digite o novo valor da Receita:">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" offsetX="2.0" offsetY="2.0">
+                     <color>
+                        <Color opacity="0.6000000238418579" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Text>
+            <TextField fx:id="textFieldValorReceita" prefHeight="0.0" prefWidth="224.0" style="-fx-background-color: #67b79e;">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" offsetX="2.0" offsetY="2.0">
+                     <color>
+                        <Color opacity="0.4000000059604645" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </TextField>
+         </children>
+      </VBox>
+      <Text fx:id="textCamposVazios" fill="#e7eb00" layoutX="317.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Campos vazios" textAlignment="CENTER" visible="false" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="200.0">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="1.0" offsetX="2.0" offsetY="2.0" radius="0.0" width="0.0">
+               <color>
+                  <Color opacity="0.20229007303714752" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Text>
+   </children>
+</AnchorPane>
