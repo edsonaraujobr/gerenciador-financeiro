@@ -6,11 +6,9 @@ Após muitas horas de trabalho árduo e resolução de bugs, finalmente consegui
 
 Intitulado **DeyeD** (uma combinação dos nomes dos desenvolvedores, Deyvson e Edson), nossa aplicação desktop tem como objetivo auxiliar os usuários a gerenciar suas finanças. Em breve, com mais calma, adicionaremos ao projeto o que ficou pendente.
 
-![image](https://github.com/edsonaraujoneto/gerenciador-financeiro/assets/137104822/98528c8a-d253-4ceb-9db2-be4cb0e6f99c)
-
 # Execução 🎬
 
-![image](https://github.com/edsonaraujoneto/gerenciador-financeiro/assets/137104822/98528c8a-d253-4ceb-9db2-be4cb0e6f99c)
+![Sem título](https://github.com/edsonaraujoneto/gerenciador-financeiro/assets/137104822/13e898d5-9c7a-403f-8919-b9cbf6e60ad6)
 
 # Tecnologias Utilizadas 🖥
 
